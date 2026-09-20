@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Elite Property | Student Accommodation in Mthatha</title>
+
+    <meta name="description" content="Contact Elite Property about student accommodation in Mthatha, Eastern Cape. Enquire about Copperleaf Residence 2, accommodation availability and the Butterworth development.">
+
+    <meta name="keywords" content="contact Elite Property, Mthatha student accommodation, WSU accommodation contact, NSFAS accommodation Mthatha, Copperleaf Residence 2 contact">
+
+    <meta property="og:title" content="Contact Elite Property">
+    <meta property="og:description" content="Get in touch with Elite Property about student accommodation and property development in the Eastern Cape.">
+    <meta property="og:type" content="website">
+
+    <style>
+
+        :root {
+            --navy: #071a2b;
+            --navy-2: #0b2439;
+            --navy-3: #102f48;
+            --orange: #f47b20;
+            --orange-light: #ff9a4a;
+            --white: #ffffff;
+            --off-white: #f5f7f9;
+            --text: #243746;
+            --muted: #71808c;
+            --shadow: 0 25px 70px rgba(0,0,0,0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        /* =========================
+           PRELOADER
+        ========================= */
+
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background: var(--navy);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.7s ease, visibility 0.7s ease;
+        }
+
+        #preloader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 46px;
+            height: 46px;
+            border: 2px solid rgba(255,255,255,0.18);
+            border-top-color: var(--orange);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7,26,43,0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav-container {
+            width: min(1180px, 92%);
+            height: 82px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--white);
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo-mark {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--orange);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-mark::before,
+        .logo-mark::after {
+            content: "";
+            position: absolute;
+            background: var(--orange);
+        }
+
+        .logo-mark::before {
+            width: 16px;
+            height: 2px;
+            transform: rotate(45deg);
+        }
+
+        .logo-mark::after {
+            width: 16px;
+            height: 2px;
+            transform: rotate(-45deg);
+        }
+
+        .logo-text {
+            font-size: 19px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.82);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--white);
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--orange);
+            color: var(--white) !important;
+            padding: 12px 18px !important;
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 0;
+            background: transparent;
+            color: var(--white);
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 67vh;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,26,43,0.97),
+                    rgba(7,26,43,0.78),
+                    rgba(7,26,43,0.48)
+                ),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=85")
+                center/cover;
+
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    120deg,
+                    transparent 0%,
+                    rgba(244,123,32,0.07) 50%,
+                    transparent 100%
+                );
+
+            animation: heroSweep 10s ease-in-out infinite;
+        }
+
+        @keyframes heroSweep {
+
+            0%, 100% {
+                transform: translateX(-35%);
+            }
+
+            50% {
+                transform: translateX(35%);
+            }
+
+        }
+
+        .hero-content {
+            width: min(1180px, 92%);
+            margin: auto;
+            padding-top: 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--orange-light);
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 22px;
+            animation: fadeUp 1s ease both;
+        }
+
+        .eyebrow span {
+            width: 38px;
+            height: 1px;
+            background: var(--orange);
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: clamp(52px, 8vw, 94px);
+            line-height: 0.95;
+            letter-spacing: -4px;
+            max-width: 850px;
+            margin-bottom: 28px;
+            animation: fadeUp 1s 0.15s ease both;
+        }
+
+        .hero h1 span {
+            color: var(--orange);
+        }
+
+        .hero p {
+            color: rgba(255,255,255,0.76);
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 650px;
+            animation: fadeUp 1s 0.3s ease both;
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* =========================
+           CONTACT INTRO
+        ========================= */
+
+        .contact-section {
+            padding: 110px 0;
+            background: var(--off-white);
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .section-label {
+            color: var(--orange);
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .contact-info h2 {
+            color: var(--navy);
+            font-size: clamp(40px, 5vw, 62px);
+            line-height: 1.03;
+            letter-spacing: -3px;
+            margin-bottom: 22px;
+        }
+
+        .contact-info h2 span {
+            color: var(--orange);
+        }
+
+        .contact-info > p {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.85;
+            margin-bottom: 40px;
+        }
+
+        /* =========================
+           CONTACT CARDS
+        ========================= */
+
+        .contact-cards {
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-left: 3px solid var(--orange);
+            padding: 23px 25px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(244,123,32,0.3);
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-card small {
+            display: block;
+            color: var(--muted);
+            text-transform: uppercase;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .contact-card strong {
+            display: block;
+            color: var(--navy);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .contact-card strong a:hover {
+            color: var(--orange);
+        }
+
+        /* =========================
+           ENQUIRY FORM
+        ========================= */
+
+        .form-wrapper {
+            background: var(--navy);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .form-wrapper::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(244,123,32,0.18);
+            border-radius: 50%;
+            right: -120px;
+            top: -120px;
+        }
+
+        .form-wrapper::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 1px solid rgba(244,123,32,0.12);
+            transform: rotate(45deg);
+            left: -100px;
+            bottom: -100px;
+        }
+
+        .form-heading {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 35px;
+        }
+
+        .form-heading .section-label {
+            color: var(--orange-light);
+        }
+
+        .form-heading h2 {
+            color: var(--white);
+            font-size: 36px;
+            line-height: 1.05;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .form-heading p {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        form {
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-group label {
+            display: block;
+            color: rgba(255,255,255,0.72);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.14);
+            background: rgba(255,255,255,0.055);
+            color: var(--white);
+            padding: 14px 15px;
+            outline: none;
+            border-radius: 0;
+            transition:
+                border-color 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.35);
+        }
+
+        .form-group select option {
+            color: #111;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--orange);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: 0;
+            background: var(--orange);
+            color: var(--white);
+            padding: 17px;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--orange-light);
+            transform: translateY(-2px);
+        }
+
+        .form-note {
+            color: rgba(255,255,255,0.4);
+            font-size: 11px;
+            line-height: 1.6;
+            margin-top: 14px;
+        }
+
+        /* =========================
+           QUICK ACTIONS
+        ========================= */
+
+        .quick-actions {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .quick-heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+        .quick-heading h2 {
+            color: var(--navy);
+            font-size: clamp(36px, 5vw, 52px);
+            letter-spacing: -2px;
+            margin-bottom: 15px;
+        }
+
+        .quick-heading p {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .quick-card {
+            padding: 40px 30px;
+            border: 1px solid rgba(7,26,43,0.09);
+            position: relative;
+            overflow: hidden;
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .quick-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0;
+            background: var(--orange);
+            transition: width 0.4s ease;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+
+        .quick-card:hover::before {
+            width: 100%;
+        }
+
+        .quick-icon {
+            width: 55px;
+            height: 55px;
+            border: 1px solid rgba(244,123,32,0.3);
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 23px;
+        }
+
+        .quick-card h3 {
+            color: var(--navy);
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .quick-card p {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .quick-card a {
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           MAP
+        ========================= */
+
+        .map-section {
+            padding: 110px 0;
+            background: var(--navy);
+        }
+
+        .map-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 40px;
+            margin-bottom: 35px;
+        }
+
+        .map-header h2 {
+            color: var(--white);
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .map-header h2 span {
+            color: var(--orange);
+        }
+
+        .map-header p {
+            max-width: 430px;
+            color: rgba(255,255,255,0.62);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 470px;
+            border: 1px solid rgba(255,255,255,0.12);
+            overflow: hidden;
+            background: var(--navy-2);
+        }
+
+        .map-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .map-address {
+            margin-top: 18px;
+            color: rgba(255,255,255,0.58);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .map-address strong {
+            color: var(--orange);
+        }
+
+        /* =========================
+           FINAL CTA
+        ========================= */
+
+        .cta {
+            padding: 110px 0;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(244,123,32,0.95),
+                    rgba(244,123,32,0.84)
+                ),
+                url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(255,255,255,0.24);
+            border-radius: 50%;
+            left: -170px;
+            top: -170px;
+        }
+
+        .cta::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 50%;
+            right: -110px;
+            bottom: -110px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta .section-label {
+            color: var(--white);
+        }
+
+        .cta h2 {
+            color: var(--white);
+            font-size: clamp(40px, 6vw, 68px);
+            line-height: 1;
+            letter-spacing: -3px;
+            max-width: 800px;
+            margin: auto auto 22px;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+            max-width: 620px;
+            margin: auto;
+        }
+
+        .cta-buttons {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            font-size: 13px;
+            font-weight: 800;
+            transition: all 0.35s ease;
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .btn-dark:hover {
+            background: var(--navy-2);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.75);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #04111d;
+            color: var(--white);
+            padding: 65px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr 0.9fr;
+            gap: 60px;
+            padding-bottom: 50px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.58);
+            line-height: 1.8;
+            max-width: 400px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer-title {
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 10px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.68);
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+
+        .footer-contact {
+            display: grid;
+            gap: 12px;
+        }
+
+        .footer-contact div {
+            color: rgba(255,255,255,0.68);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            color: rgba(255,255,255,0.4);
+            font-size: 12px;
+        }
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(45px);
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .map-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 760px) {
+
+            .nav-container {
+                height: 72px;
+            }
+
+            nav {
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                background: var(--navy);
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 15px 5%;
+                border-top: 1px solid rgba(255,255,255,0.08);
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            nav a {
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.07);
+            }
+
+            .nav-cta {
+                text-align: center;
+                margin-top: 8px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .contact-section,
+            .quick-actions,
+            .map-section,
+            .cta {
+                padding: 80px 0;
+            }
+
+            .form-wrapper {
+                padding: 35px 25px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-frame {
+                height: 360px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================
+         PRELOADER
+    ========================= -->
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-mark"></div>
+
+                <div class="logo-text">
+                    ELITE PROPERTY
+                </div>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                aria-label="Open menu"
+                onclick="toggleMenu()">
+                ☰
+            </button>
+
+
+            <nav id="mainNav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="accommodation.html">
+                    Accommodation
+                </a>
+
+                <a href="facilities.html">
+                    Facilities
+                </a>
+
+                <a href="development.html">
+                    Development
+                </a>
+
+                <a href="contact.html" class="active">
+                    Contact
+                </a>
+
+                <a href="contact.html#enquiry" class="nav-cta">
+                    Enquire
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+
+                <span></span>
+
+                Start a conversation
+
+            </div>
+
+
+            <h1>
+
+                Let's talk about<br>
+
+                <span>your next chapter.</span>
+
+            </h1>
+
+
+            <p>
+
+                Whether you're looking for student accommodation,
+                enquiring on behalf of a student, or interested in
+                Elite Property's development plans, we're here to
+                help.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT + FORM
+    ========================= -->
+
+    <section class="contact-section" id="enquiry">
+
+        <div class="container">
+
+            <div class="contact-grid">
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="contact-info reveal-left">
+
+                    <div class="section-label">
+                        Get In Touch
+                    </div>
+
+
+                    <h2>
+
+                        One conversation
+                        can start the
+                        <span>next move.</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Contact Elite Property directly for accommodation
+                        enquiries, general questions, or information
+                        about our current and upcoming developments.
+
+                    </p>
+
+
+                    <div class="contact-cards">
+
+
+                        <!-- PHONE -->
+
+                        <div class="contact-card">
+
+                            <div class="contact-icon">
+                                ☎
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Phone
+                                </small>
+
+                                <strong>
+                                    <a href="tel:+27684326815">
+                                        068 432 6815
+                                    </a>
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="contact-card">
+
+                            <div class="contact-icon">
+                                @
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Email
+                                </small>
+
+                                <strong>
+                                    <a href="mailto:Lshakoane03@gmail.com">
+                                        Lshakoane03@gmail.com
+                                    </a>
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ADDRESS -->
+
+                        <div class="contact-card">
+
+                            <div class="contact-icon">
+                                +
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Current Property
+                                </small>
+
+                                <strong>
+                                    888 Mgxaji Street,<br>
+                                    Ngangelizwe, Mthatha
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LOCATION -->
+
+                        <div class="contact-card">
+
+                            <div class="contact-icon">
+                                ◉
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Region
+                                </small>
+
+                                <strong>
+                                    Eastern Cape, South Africa
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <div class="form-wrapper reveal-right">
+
+                    <div class="form-heading">
+
+                        <div class="section-label">
+                            Accommodation Enquiry
+                        </div>
+
+                        <h2>
+                            Tell us what you need.
+                        </h2>
+
+                        <p>
+                            Complete the form below and the Elite Property
+                            team can follow up with you directly.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        action="mailto:Lshakoane03@gmail.com"
+                        method="post"
+                        enctype="text/plain">
+
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="Full Name"
+                                    placeholder="Your full name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="Phone Number"
+                                    placeholder="Your phone number"
+                                    required>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="Email Address"
+                                    placeholder="Your email address"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="role">
+                                    I am enquiring as
+                                </label>
+
+                                <select id="role" name="Enquirer Type" required>
+
+                                    <option value="">
+                                        Please select
+                                    </option>
+
+                                    <option value="Student">
+                                        Student
+                                    </option>
+
+                                    <option value="Parent or Guardian">
+                                        Parent / Guardian
+                                    </option>
+
+                                    <option value="Institution">
+                                        Institution
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="interest">
+                                What are you enquiring about?
+                            </label>
+
+                            <select
+                                id="interest"
+                                name="Enquiry Type"
+                                required>
+
+                                <option value="">
+                                    Please select
+                                </option>
+
+                                <option value="Current Accommodation">
+                                    Current Accommodation
+                                </option>
+
+                                <option value="NSFAS Accommodation">
+                                    NSFAS Accommodation
+                                </option>
+
+                                <option value="Butterworth Development">
+                                    Butterworth Development
+                                </option>
+
+                                <option value="General Enquiry">
+                                    General Enquiry
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="Message"
+                                placeholder="Tell us a little about your enquiry..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="submit-btn">
+
+                            SEND ENQUIRY
+
+                        </button>
+
+
+                        <div class="form-note">
+
+                            Your email application will open when you
+                            submit this form. If this does not happen,
+                            you can contact Elite Property directly
+                            using the details on this page.
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUICK ACTIONS
+    ========================= -->
+
+    <section class="quick-actions">
+
+        <div class="container">
+
+
+            <div class="quick-heading reveal">
+
+                <div class="section-label">
+                    Need Something Specific?
+                </div>
+
+                <h2>
+                    Choose your next step.
+                </h2>
+
+                <p>
+                    We've made it easy to find the information
+                    you're looking for.
+                </p>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+
+                <article class="quick-card reveal">
+
+                    <div class="quick-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Looking for accommodation?
+                    </h3>
+
+                    <p>
+                        Explore Copperleaf Residence 2 and discover
+                        the facilities available to students in Mthatha.
+                    </p>
+
+                    <a href="accommodation.html">
+                        View Accommodation →
+                    </a>
+
+                </article>
+
+
+                <article class="quick-card reveal">
+
+                    <div class="quick-icon">
+                        □
+                    </div>
+
+                    <h3>
+                        Want to see the facilities?
+                    </h3>
+
+                    <p>
+                        Take a closer look at the practical facilities
+                        designed around everyday student living.
+                    </p>
+
+                    <a href="facilities.html">
+                        Explore Facilities →
+                    </a>
+
+                </article>
+
+
+                <article class="quick-card reveal">
+
+                    <div class="quick-icon">
+                        +
+                    </div>
+
+                    <h3>
+                        Interested in Butterworth?
+                    </h3>
+
+                    <p>
+                        Learn more about Elite Property's upcoming
+                        student accommodation development.
+                    </p>
+
+                    <a href="development.html">
+                        View Development →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAP
+    ========================= -->
+
+    <section class="map-section">
+
+        <div class="container">
+
+
+            <div class="map-header reveal">
+
+                <div>
+
+                    <div class="section-label">
+                        Find Us
+                    </div>
+
+                    <h2>
+                        Copperleaf<br>
+                        <span>Residence 2.</span>
+                    </h2>
+
+                </div>
+
+
+                <p>
+
+                    Elite Property's current student accommodation
+                    is located at 888 Mgxaji Street, Ngangelizwe,
+                    Mthatha, Eastern Cape.
+
+                </p>
+
+            </div>
+
+
+            <div class="map-frame reveal">
+
+                <iframe
+                    src="https://www.google.com/maps?q=888+Mgxaji+Street,+Ngangelizwe,+Mthatha,+Eastern+Cape,+South+Africa&output=embed"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+
+            <div class="map-address">
+
+                <strong>Address:</strong>
+
+                888 Mgxaji Street,
+                Ngangelizwe,
+                Mthatha,
+                Eastern Cape,
+                South Africa.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================= -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-content reveal">
+
+                <div class="section-label">
+                    Elite Property
+                </div>
+
+                <h2>
+                    Your next chapter starts with the right place.
+                </h2>
+
+                <p>
+                    Get in touch with Elite Property today and
+                    let's start the conversation.
+                </p>
+
+
+                <div class="cta-buttons">
+
+                    <a
+                        href="tel:+27684326815"
+                        class="btn btn-dark">
+
+                        Call 068 432 6815
+
+                    </a>
+
+
+                    <a
+                        href="https://wa.me/27684326815"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-outline">
+
+                        WhatsApp Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <div class="logo-mark"></div>
+
+                        <div class="logo-text">
+                            ELITE PROPERTY
+                        </div>
+
+                    </a>
+
+                    <p>
+                        Quality student accommodation designed around
+                        safety, comfort, connectivity and student success
+                        in the Eastern Cape.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Explore
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="index.html">
+                            Home
+                        </a>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="accommodation.html">
+                            Accommodation
+                        </a>
+
+                        <a href="facilities.html">
+                            Facilities
+                        </a>
+
+                        <a href="development.html">
+                            Development
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Contact
+                    </div>
+
+                    <div class="footer-contact">
+
+                        <div>
+                            068 432 6815
+                        </div>
+
+                        <div>
+                            Lshakoane03@gmail.com
+                        </div>
+
+                        <div>
+                            888 Mgxaji Street,<br>
+                            Ngangelizwe,<br>
+                            Mthatha,<br>
+                            Eastern Cape
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <div>
+                    © 2026 Elite Property. All rights reserved.
+                </div>
+
+                <div>
+                    Student Accommodation · Eastern Cape
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* PRELOADER */
+
+        window.addEventListener("load", function() {
+
+            setTimeout(function() {
+
+                document
+                    .getElementById("preloader")
+                    .classList.add("hide");
+
+            }, 500);
+
+        });
+
+
+        /* MOBILE MENU */
+
+        function toggleMenu() {
+
+            const nav = document.getElementById("mainNav");
+
+            nav.classList.toggle("open");
+
+        }
+
+
+        /* CLOSE MOBILE MENU */
+
+        document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                document
+                    .getElementById("mainNav")
+                    .classList.remove("open");
+
+            });
+
+        });
+
+
+        /* SCROLL REVEAL */
+
+        const revealElements = document.querySelectorAll(
+            ".reveal, .reveal-left, .reveal-right"
+        );
+
+
+        const revealObserver = new IntersectionObserver(
+
+            function(entries) {
+
+                entries.forEach(function(entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        revealObserver.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+        revealElements.forEach(function(element) {
+
+            revealObserver.observe(element);
+
+        });
+
+
+        /* STAGGER QUICK CARDS */
+
+        document.querySelectorAll(".quick-card").forEach(function(card, index) {
+
+            card.style.transitionDelay =
+                (index * 0.07) + "s";
+
+        });
+
+    </script>
+
+</body>
+</html>
