@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Elite Property | Student Accommodation in the Eastern Cape</title>
+
+    <meta name="description" content="Learn about Elite Property, an established student accommodation provider operating since 2015 in Mthatha, Eastern Cape. Discover our story, mission, vision and commitment to safe, quality student housing.">
+
+    <meta name="keywords" content="Elite Property, student accommodation Mthatha, student accommodation Eastern Cape, NSFAS accommodation, Walter Sisulu University accommodation, Mthatha student housing">
+
+    <meta name="author" content="Elite Property">
+
+    <meta property="og:title" content="About Elite Property">
+    <meta property="og:description" content="Building safe, secure and student-centred accommodation in the Eastern Cape since 2015.">
+    <meta property="og:type" content="website">
+
+    <style>
+
+        /* =========================================================
+           ELITE PROPERTY — ABOUT PAGE
+           Temporary inline styling
+           Final CSS will be consolidated into style.css later.
+        ========================================================= */
+
+        :root {
+            --navy: #071a2b;
+            --navy-light: #0c263d;
+            --navy-mid: #10344e;
+            --orange: #f47b20;
+            --orange-light: #ff9945;
+            --white: #ffffff;
+            --off-white: #f5f7f9;
+            --grey: #aab7c3;
+            --dark-grey: #687785;
+            --black: #030b12;
+            --line: rgba(255,255,255,0.10);
+            --shadow: 0 25px 70px rgba(0,0,0,0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--off-white);
+            color: var(--navy);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        /* =========================================================
+           PRELOADER
+        ========================================================= */
+
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background: var(--navy);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #preloader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            text-align: center;
+            color: white;
+        }
+
+        .loader-mark {
+            width: 48px;
+            height: 48px;
+            border: 3px solid rgba(255,255,255,0.15);
+            border-top-color: var(--orange);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 18px;
+        }
+
+        .loader span {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 86px;
+            z-index: 1000;
+            background: rgba(7,26,43,0.94);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav {
+            width: min(1180px, 92%);
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Temporary logo mark — replace with approved logo later */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+        }
+
+        .logo-mark {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--orange);
+            position: relative;
+        }
+
+        .logo-mark::before {
+            content: "";
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            background: var(--orange);
+            top: 9px;
+            left: 9px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .logo-sub {
+            margin-top: 5px;
+            font-size: 8px;
+            letter-spacing: 3px;
+            color: var(--orange);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.78);
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 11px 18px;
+            background: var(--orange);
+            color: white !important;
+            border-radius: 2px;
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .nav-cta:hover {
+            background: var(--orange-light);
+            transform: translateY(-2px);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 42px;
+            height: 42px;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            cursor: pointer;
+            font-size: 22px;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .page-hero {
+            min-height: 78vh;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,26,43,0.96) 0%,
+                    rgba(7,26,43,0.78) 48%,
+                    rgba(7,26,43,0.32) 100%
+                ),
+                url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    135deg,
+                    transparent 0%,
+                    rgba(244,123,32,0.06) 50%,
+                    transparent 100%
+                );
+            animation: heroGlow 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            from {
+                transform: translateX(-5%);
+            }
+            to {
+                transform: translateX(5%);
+            }
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            opacity: 0.12;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px);
+            background-size: 90px 90px;
+        }
+
+        .hero-content {
+            width: min(1180px, 92%);
+            margin: auto;
+            position: relative;
+            z-index: 2;
+            padding-top: 80px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--orange);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 38px;
+            height: 2px;
+            background: var(--orange);
+        }
+
+        .page-hero h1 {
+            max-width: 800px;
+            color: white;
+            font-size: clamp(45px, 7vw, 82px);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            margin-bottom: 28px;
+            animation: heroReveal 1.2s ease forwards;
+        }
+
+        .page-hero h1 span {
+            color: var(--orange);
+        }
+
+        .hero-text {
+            max-width: 650px;
+            color: rgba(255,255,255,0.78);
+            font-size: 18px;
+            line-height: 1.8;
+            animation: heroReveal 1.4s 0.2s ease both;
+        }
+
+        @keyframes heroReveal {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 35px;
+            left: 4%;
+            color: rgba(255,255,255,0.55);
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+        }
+
+        .hero-scroll::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 55px;
+            background: var(--orange);
+            margin: 12px auto 0;
+        }
+
+        /* =========================================================
+           SECTION BASICS
+        ========================================================= */
+
+        section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section-label {
+            color: var(--orange);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .section-intro {
+            max-width: 650px;
+            color: var(--dark-grey);
+            font-size: 17px;
+        }
+
+        /* =========================================================
+           INTRO / STORY
+        ========================================================= */
+
+        .story {
+            background: white;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .story-image {
+            position: relative;
+        }
+
+        .story-image img {
+            height: 620px;
+            object-fit: cover;
+            filter: saturate(0.85);
+        }
+
+        .story-image::after {
+            content: "";
+            position: absolute;
+            right: -18px;
+            bottom: -18px;
+            width: 130px;
+            height: 130px;
+            border-right: 3px solid var(--orange);
+            border-bottom: 3px solid var(--orange);
+        }
+
+        .story-year {
+            position: absolute;
+            left: -28px;
+            bottom: 35px;
+            background: var(--orange);
+            color: white;
+            padding: 25px 28px;
+            z-index: 2;
+        }
+
+        .story-year strong {
+            display: block;
+            font-size: 38px;
+            line-height: 1;
+        }
+
+        .story-year span {
+            display: block;
+            margin-top: 5px;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .story-copy p {
+            color: var(--dark-grey);
+            margin-bottom: 22px;
+            font-size: 16px;
+        }
+
+        .story-copy p:first-of-type {
+            font-size: 20px;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        /* =========================================================
+           TIMELINE
+        ========================================================= */
+
+        .timeline-section {
+            background: var(--navy);
+            color: white;
+        }
+
+        .timeline-header {
+            max-width: 700px;
+            margin-bottom: 75px;
+        }
+
+        .timeline-header .section-title {
+            color: white;
+        }
+
+        .timeline-header .section-intro {
+            color: var(--grey);
+        }
+
+        .timeline {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 45px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 18px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(255,255,255,0.15);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-top: 55px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 17px;
+            height: 17px;
+            border: 3px solid var(--navy);
+            background: var(--orange);
+            box-shadow: 0 0 0 1px var(--orange);
+        }
+
+        .timeline-year {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--orange);
+            margin-bottom: 15px;
+        }
+
+        .timeline-item h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-item p {
+            color: var(--grey);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* =========================================================
+           MISSION + VISION
+        ========================================================= */
+
+        .values {
+            background: var(--off-white);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 55px;
+            position: relative;
+            border-top: 4px solid var(--orange);
+            box-shadow: 0 15px 45px rgba(7,26,43,0.06);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 55px rgba(7,26,43,0.12);
+        }
+
+        .value-number {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--orange);
+            margin-bottom: 35px;
+        }
+
+        .value-card h3 {
+            font-size: 31px;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .value-card p {
+            color: var(--dark-grey);
+            font-size: 15px;
+        }
+
+        /* =========================================================
+           IMPACT
+        ========================================================= */
+
+        .impact {
+            background: white;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .impact-copy h2 {
+            font-size: clamp(36px, 5vw, 55px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .impact-copy p {
+            color: var(--dark-grey);
+            margin-bottom: 18px;
+        }
+
+        .impact-list {
+            margin-top: 35px;
+        }
+
+        .impact-item {
+            display: flex;
+            gap: 18px;
+            padding: 18px 0;
+            border-bottom: 1px solid #e3e7eb;
+        }
+
+        .impact-icon {
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+            border: 2px solid var(--orange);
+            position: relative;
+        }
+
+        .impact-icon::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 5px;
+            border-left: 2px solid var(--orange);
+            border-bottom: 2px solid var(--orange);
+            transform: rotate(-45deg);
+            top: 8px;
+            left: 8px;
+        }
+
+        .impact-item strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .impact-item span {
+            color: var(--dark-grey);
+            font-size: 14px;
+        }
+
+        .impact-visual {
+            position: relative;
+        }
+
+        .impact-visual img {
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .impact-stat {
+            position: absolute;
+            left: -35px;
+            bottom: 40px;
+            background: var(--navy);
+            color: white;
+            padding: 30px;
+            width: 210px;
+        }
+
+        .impact-stat strong {
+            display: block;
+            color: var(--orange);
+            font-size: 45px;
+            line-height: 1;
+        }
+
+        .impact-stat span {
+            display: block;
+            margin-top: 8px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--grey);
+        }
+
+        /* =========================================================
+           PRESENT DAY
+        ========================================================= */
+
+        .present {
+            background: var(--navy-light);
+            color: white;
+        }
+
+        .present-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: rgba(255,255,255,0.1);
+            margin-top: 60px;
+        }
+
+        .present-card {
+            background: var(--navy-light);
+            padding: 45px 30px;
+            min-height: 220px;
+            transition: 0.4s ease;
+        }
+
+        .present-card:hover {
+            background: var(--navy-mid);
+        }
+
+        .present-card strong {
+            display: block;
+            color: var(--orange);
+            font-size: 43px;
+            margin-bottom: 15px;
+        }
+
+        .present-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .present-card p {
+            color: var(--grey);
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           DEVELOPMENT CTA
+        ========================================================= */
+
+        .development {
+            min-height: 560px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,26,43,0.98),
+                    rgba(7,26,43,0.72)
+                ),
+                url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .development-content {
+            max-width: 750px;
+        }
+
+        .development h2 {
+            color: white;
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .development p {
+            color: rgba(255,255,255,0.72);
+            font-size: 17px;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            background: var(--orange);
+            color: white;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+
+        .button:hover {
+            background: var(--orange-light);
+            transform: translateY(-3px);
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #030b12;
+            color: white;
+            padding: 75px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 60px;
+            padding-bottom: 55px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-brand p {
+            max-width: 400px;
+            color: var(--grey);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .footer-title {
+            font-size: 11px;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: var(--grey);
+            font-size: 13px;
+            margin-bottom: 11px;
+            transition: 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(4px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding-top: 25px;
+            color: #66727c;
+            font-size: 11px;
+        }
+
+        /* =========================================================
+           SCROLL REVEALS
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(45px);
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s cubic-bezier(.2,.7,.2,1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-55px);
+            transition: 1s ease;
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(55px);
+            transition: 1s ease;
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 86px;
+                left: 0;
+                width: 100%;
+                background: var(--navy);
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                padding: 20px 4%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+
+            .nav-links.open {
+                max-height: 500px;
+            }
+
+            .nav-links a {
+                width: 100%;
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+
+            .nav-cta {
+                display: inline-block;
+                width: auto !important;
+                margin-top: 10px;
+                padding: 12px 18px !important;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .story-grid,
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 55px;
+            }
+
+            .story-image img,
+            .impact-visual img {
+                height: 500px;
+            }
+
+            .timeline {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 8px;
+                width: 1px;
+                height: auto;
+            }
+
+            .timeline-item {
+                padding-top: 0;
+                padding-left: 45px;
+            }
+
+            .timeline-dot {
+                left: 0;
+                top: 5px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .present-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                height: 74px;
+            }
+
+            .nav-links {
+                top: 74px;
+            }
+
+            .page-hero {
+                min-height: 78vh;
+            }
+
+            .hero-content {
+                padding-top: 50px;
+            }
+
+            .page-hero h1 {
+                font-size: 47px;
+                letter-spacing: -2px;
+            }
+
+            .hero-text {
+                font-size: 15px;
+            }
+
+            .hero-scroll {
+                display: none;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .story-image img,
+            .impact-visual img {
+                height: 420px;
+            }
+
+            .story-year {
+                left: 15px;
+                bottom: 20px;
+            }
+
+            .value-card {
+                padding: 35px 25px;
+            }
+
+            .present-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .development {
+                min-height: 500px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal,
+            .reveal-left,
+            .reveal-right {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     PRELOADER
+========================================================= -->
+
+<div id="preloader">
+    <div class="loader">
+        <div class="loader-mark"></div>
+        <span>Elite Property</span>
+    </div>
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <nav class="nav">
+
+        <a href="index.html" class="logo">
+
+            <!-- Temporary logo -->
+            <div class="logo-mark"></div>
+
+            <div class="logo-text">
+                <div class="logo-main">ELITE PROPERTY</div>
+                <div class="logo-sub">STUDENT ACCOMMODATION</div>
+            </div>
+
+        </a>
+
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+            ☰
+        </button>
+
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html" class="active">About</a>
+
+            <a href="accommodation.html">Accommodation</a>
+
+            <a href="facilities.html">Facilities</a>
+
+            <a href="development.html">Development</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="contact.html" class="nav-cta">Enquire Now</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="page-hero">
+
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            About Elite Property
+        </div>
+
+        <h1>
+            Built around
+            <span>people.</span>
+        </h1>
+
+        <p class="hero-text">
+            Since 2015, Elite Property has been creating safe,
+            secure and student-centred accommodation in the
+            Eastern Cape — helping students find more than
+            somewhere to sleep, but somewhere to succeed.
+        </p>
+
+    </div>
+
+    <div class="hero-scroll">
+        Discover our story
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OUR STORY
+========================================================= -->
+
+<section class="section story">
+
+    <div class="container story-grid">
+
+        <div class="story-image reveal-left">
+
+            <img
+                src="https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern residential property"
+            >
+
+            <div class="story-year">
+                <strong>2015</strong>
+                <span>Established</span>
+            </div>
+
+        </div>
+
+
+        <div class="story-copy reveal-right">
+
+            <div class="section-label">
+                Our Story
+            </div>
+
+            <h2 class="section-title">
+                A foundation for
+                <span style="color:var(--orange);">success.</span>
+            </h2>
+
+            <p>
+                Elite Property is an established student accommodation
+                provider based in Mthatha, Eastern Cape, with a commitment
+                to creating environments where students can live securely,
+                comfortably and with confidence.
+            </p>
+
+            <p>
+                Operating since 2015, the business has developed its
+                experience around the needs of students and the standards
+                required to provide dependable accommodation within the
+                tertiary education environment.
+            </p>
+
+            <p>
+                Our current property, Copperleaf Residence 2, provides
+                14-bed NSFAS-accredited student accommodation and primarily
+                serves students attending Walter Sisulu University and
+                surrounding tertiary institutions.
+            </p>
+
+            <p>
+                From secure living spaces and furnished bedrooms to
+                connectivity, communal facilities and renewable-energy
+                infrastructure, our approach is centred on creating a
+                practical environment that supports student life.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OUR JOURNEY
+========================================================= -->
+
+<section class="section timeline-section">
+
+    <div class="container">
+
+        <div class="timeline-header reveal">
+
+            <div class="section-label">
+                Our Journey
+            </div>
+
+            <h2 class="section-title">
+                Growing with
+                <span style="color:var(--orange);">purpose.</span>
+            </h2>
+
+            <p class="section-intro">
+                Our journey reflects a long-term commitment to student
+                accommodation, operational reliability and continued
+                investment in the communities we serve.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-year">
+                    2015
+                </div>
+
+                <h3>
+                    The beginning
+                </h3>
+
+                <p>
+                    Elite Property began operating with a focus on
+                    providing accommodation that meets the practical
+                    needs of students in the Eastern Cape.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-year">
+                    Today
+                </div>
+
+                <h3>
+                    Copperleaf Residence 2
+                </h3>
+
+                <p>
+                    The current 14-bed NSFAS-accredited residence serves
+                    students primarily attending Walter Sisulu University,
+                    supported by security, Wi-Fi, communal facilities
+                    and renewable-energy systems.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-year">
+                    2026
+                </div>
+
+                <h3>
+                    Expanding access
+                </h3>
+
+                <p>
+                    A new student accommodation development in Butterworth
+                    is being developed approximately 700 metres walking
+                    distance from universities and other tertiary
+                    institutions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MISSION + VISION
+========================================================= -->
+
+<section class="section values">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                What Drives Us
+            </div>
+
+            <h2 class="section-title">
+                Purpose behind
+                <span style="color:var(--orange);">the property.</span>
+            </h2>
+
+            <p class="section-intro">
+                Our work is guided by a simple principle: quality
+                accommodation can make a meaningful difference to
+                the student experience.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+            <article class="value-card reveal">
+
+                <div class="value-number">
+                    01 / MISSION
+                </div>
+
+                <h3>
+                    Supporting student success
+                </h3>
+
+                <p>
+                    To provide safe, secure, affordable and student-centred
+                    accommodation that creates an environment supporting
+                    academic success while contributing to local community
+                    development.
+                </p>
+
+            </article>
+
+
+            <article class="value-card reveal">
+
+                <div class="value-number">
+                    02 / VISION
+                </div>
+
+                <h3>
+                    Building for the future
+                </h3>
+
+                <p>
+                    To become a leading provider of quality student
+                    accommodation in the Eastern Cape, expanding access
+                    to safe and affordable housing for students across
+                    tertiary institutions.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     COMMUNITY IMPACT
+========================================================= -->
+
+<section class="section impact">
+
+    <div class="container impact-grid">
+
+        <div class="impact-copy reveal-left">
+
+            <div class="section-label">
+                Our Impact
+            </div>
+
+            <h2>
+                Accommodation
+                with a wider
+                <span style="color:var(--orange);">purpose.</span>
+            </h2>
+
+            <p>
+                Student accommodation is more than a building.
+                It forms part of the infrastructure that enables
+                students to participate in tertiary education.
+            </p>
+
+            <p>
+                Elite Property contributes to this environment by
+                maintaining accommodation standards, supporting
+                local employment and investing in infrastructure
+                designed to improve reliability and quality of life.
+            </p>
+
+
+            <div class="impact-list">
+
+                <div class="impact-item">
+
+                    <div class="impact-icon"></div>
+
+                    <div>
+                        <strong>Student-focused accommodation</strong>
+                        <span>
+                            Designed around the practical needs of tertiary students.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="impact-item">
+
+                    <div class="impact-icon"></div>
+
+                    <div>
+                        <strong>Local employment</strong>
+                        <span>
+                            Supporting employment through ongoing property operations.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="impact-item">
+
+                    <div class="impact-icon"></div>
+
+                    <div>
+                        <strong>Infrastructure investment</strong>
+                        <span>
+                            Continued investment in property and renewable-energy infrastructure.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="impact-item">
+
+                    <div class="impact-icon"></div>
+
+                    <div>
+                        <strong>Community contribution</strong>
+                        <span>
+                            Helping strengthen the student-housing environment in the region.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="impact-visual reveal-right">
+
+            <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85"
+                alt="Modern community and accommodation environment"
+            >
+
+            <div class="impact-stat">
+
+                <strong>5</strong>
+
+                <span>
+                    Current employees
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ELITE PROPERTY TODAY
+========================================================= -->
+
+<section class="section present">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                Elite Property Today
+            </div>
+
+            <h2 class="section-title">
+                Where we are
+                <span style="color:var(--orange);">today.</span>
+            </h2>
+
+            <p class="section-intro">
+                From an established student accommodation operation
+                to a growing property development pipeline, Elite
+                Property continues to build with the future in mind.
+            </p>
+
+        </div>
+
+
+        <div class="present-grid">
+
+            <div class="present-card reveal">
+
+                <strong>14</strong>
+
+                <h3>
+                    Current beds
+                </h3>
+
+                <p>
+                    NSFAS-accredited accommodation at Copperleaf Residence 2.
+                </p>
+
+            </div>
+
+
+            <div class="present-card reveal">
+
+                <strong>24/7</strong>
+
+                <h3>
+                    Security
+                </h3>
+
+                <p>
+                    Security is an integral part of the accommodation environment.
+                </p>
+
+            </div>
+
+
+            <div class="present-card reveal">
+
+                <strong>5–7</strong>
+
+                <h3>
+                    KM from WSU
+                </h3>
+
+                <p>
+                    Copperleaf Residence 2 is approximately 5–7 km from Walter Sisulu University.
+                </p>
+
+            </div>
+
+
+            <div class="present-card reveal">
+
+                <strong>700m</strong>
+
+                <h3>
+                    Future proximity
+                </h3>
+
+                <p>
+                    The Butterworth development is planned approximately 700 metres from tertiary institutions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DEVELOPMENT CTA
+========================================================= -->
+
+<section class="development">
+
+    <div class="container">
+
+        <div class="development-content reveal">
+
+            <div class="section-label">
+                The Next Chapter
+            </div>
+
+            <h2>
+                Building more
+                opportunities for
+                <span style="color:var(--orange);">students.</span>
+            </h2>
+
+            <p>
+                Our Butterworth development represents the next stage
+                in Elite Property's growth — increasing accommodation
+                capacity and expanding access to quality student housing
+                in the Eastern Cape.
+            </p>
+
+            <a href="development.html" class="button">
+                Explore the Development
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <div class="logo-mark"></div>
+
+                    <div class="logo-text">
+                        <div class="logo-main">ELITE PROPERTY</div>
+                        <div class="logo-sub">STUDENT ACCOMMODATION</div>
+                    </div>
+
+                </div>
+
+                <p>
+                    Providing safe, secure and student-centred
+                    accommodation in the Eastern Cape since 2015.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Explore
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="facilities.html">Facilities</a>
+                    <a href="development.html">Development</a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Contact
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="tel:0684326815">
+                        068 432 6815
+                    </a>
+
+                    <a href="mailto:Lshakoane03@gmail.com">
+                        Lshakoane03@gmail.com
+                    </a>
+
+                    <a href="contact.html">
+                        Make an Enquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="year"></span> Elite Property. All rights reserved.
+            </span>
+
+            <span>
+                Mthatha · Eastern Cape · South Africa
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /* =========================================================
+       PRELOADER
+    ========================================================= */
+
+    window.addEventListener("load", function () {
+
+        setTimeout(function () {
+
+            document
+                .getElementById("preloader")
+                .classList.add("hide");
+
+        }, 500);
+
+    });
+
+
+    /* =========================================================
+       MOBILE NAVIGATION
+    ========================================================= */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("open");
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navLinks.classList.remove("open");
+
+        });
+
+    });
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    const revealElements = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right"
+    );
+
+    const observer = new IntersectionObserver(
+
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+    revealElements.forEach(function (element) {
+
+        observer.observe(element);
+
+    });
+
+
+    /* =========================================================
+       FOOTER YEAR
+    ========================================================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* =========================================================
+       SUBTLE HERO PARALLAX
+    ========================================================= */
+
+    window.addEventListener("scroll", function () {
+
+        const hero = document.querySelector(".page-hero");
+
+        if (!hero) return;
+
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition < window.innerHeight) {
+
+            hero.style.backgroundPosition =
+                "center " + (scrollPosition * 0.18) + "px";
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
