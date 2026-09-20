@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Policy | Elite Property</title>
+
+<meta name="description" content="Elite Property Privacy Policy. Learn how Elite Property handles personal information submitted through its student accommodation website.">
+
+<style>
+
+/* =========================================================
+   ELITE PROPERTY — PRIVACY PAGE
+========================================================= */
+
+:root {
+    --navy: #071a2b;
+    --navy-light: #0d2942;
+    --orange: #f47b20;
+    --orange-dark: #d96512;
+    --white: #ffffff;
+    --off-white: #f5f7f9;
+    --text: #17212b;
+    --muted: #65717d;
+    --border: rgba(7,26,43,0.10);
+    --shadow: 0 20px 60px rgba(0,0,0,0.12);
+    --transition: all 0.35s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   PRELOADER
+========================================================= */
+
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: var(--navy);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.preloader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-inner {
+    text-align: center;
+    color: white;
+}
+
+.loader-mark {
+    width: 55px;
+    height: 55px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-top-color: var(--orange);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.loader-inner span {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 0;
+    background: rgba(7,26,43,0.96);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--orange);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-mark::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-left: 2px solid var(--orange);
+    border-top: 2px solid var(--orange);
+    transform: rotate(45deg);
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.logo-text small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 2.5px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+    flex-wrap: nowrap;
+    min-width: 0;
+}
+
+.desktop-nav a {
+    position: relative;
+    color: rgba(255,255,255,0.88);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 9px 8px;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.desktop-nav a::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 3px;
+    height: 2px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+    color: white;
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a.active::after {
+    transform: scaleX(1);
+}
+
+.nav-cta {
+    background: var(--orange) !important;
+    color: white !important;
+    padding: 10px 13px !important;
+    margin-left: 4px;
+    flex-shrink: 0;
+}
+
+.nav-cta::after {
+    display: none;
+}
+
+.nav-cta:hover {
+    background: var(--orange-dark) !important;
+}
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+.menu-toggle {
+    display: none;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 21px;
+    height: 2px;
+    background: white;
+    transition: var(--transition);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-nav {
+    position: fixed;
+    inset: 0;
+    background: rgba(7,26,43,0.98);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+}
+
+.mobile-nav.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav-inner {
+    width: min(500px, 90%);
+    text-align: center;
+}
+
+.mobile-nav a {
+    display: block;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 12px 0;
+}
+
+.mobile-nav a:hover {
+    color: var(--orange);
+}
+
+.mobile-nav .mobile-cta {
+    display: inline-block;
+    background: var(--orange);
+    padding: 13px 28px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.page-hero {
+    background:
+        linear-gradient(90deg, rgba(7,26,43,0.97), rgba(7,26,43,0.82)),
+        url("https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 100px;
+}
+
+.page-hero-content {
+    width: min(1180px, calc(100% - 40px));
+    margin: auto;
+}
+
+.eyebrow {
+    display: block;
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.page-hero h1 {
+    font-size: clamp(44px, 7vw, 76px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 22px;
+}
+
+.page-hero p {
+    max-width: 680px;
+    color: rgba(255,255,255,0.72);
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   POLICY CONTENT
+========================================================= */
+
+.policy-section {
+    padding: 90px 0;
+    background: var(--white);
+}
+
+.policy-container {
+    width: min(900px, calc(100% - 40px));
+    margin: auto;
+}
+
+.policy-intro {
+    padding: 25px 30px;
+    border-left: 4px solid var(--orange);
+    background: var(--off-white);
+    margin-bottom: 55px;
+}
+
+.policy-intro p {
+    color: var(--muted);
+}
+
+.policy-block {
+    margin-bottom: 48px;
+}
+
+.policy-block h2 {
+    font-size: 29px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: var(--navy);
+}
+
+.policy-block h2 span {
+    color: var(--orange);
+}
+
+.policy-block p {
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.policy-block ul {
+    padding-left: 22px;
+    color: var(--muted);
+}
+
+.policy-block li {
+    margin-bottom: 9px;
+}
+
+.contact-box {
+    background: var(--navy);
+    color: white;
+    padding: 35px;
+    margin-top: 25px;
+}
+
+.contact-box h3 {
+    color: var(--orange);
+    margin-bottom: 12px;
+}
+
+.contact-box p {
+    color: rgba(255,255,255,0.72);
+}
+
+.contact-box a {
+    color: var(--orange);
+}
+
+.last-updated {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: #04111d;
+    color: white;
+    padding: 65px 0 25px;
+}
+
+.footer-grid {
+    width: min(1180px, calc(100% - 40px));
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 65px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-brand p {
+    color: rgba(255,255,255,0.55);
+    max-width: 360px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-column h4 {
+    color: var(--orange);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.footer-column a {
+    display: block;
+    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+    margin-bottom: 9px;
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--orange);
+    padding-left: 4px;
+}
+
+.footer-contact {
+    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.footer-contact a {
+    display: block;
+}
+
+.footer-bottom {
+    width: min(1180px, calc(100% - 40px));
+    margin: auto;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: rgba(255,255,255,0.4);
+    font-size: 11px;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a:hover {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   COOKIE BANNER
+========================================================= */
+
+.cookie-banner {
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 5000;
+
+    background: rgba(7,26,43,0.97);
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow: 0 20px 70px rgba(0,0,0,0.35);
+
+    padding: 22px 25px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    backdrop-filter: blur(15px);
+
+    animation: cookieSlideUp 0.5s ease forwards;
+}
+
+.cookie-banner.show {
+    display: flex;
+}
+
+.cookie-text {
+    max-width: 760px;
+}
+
+.cookie-text strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.cookie-text p {
+    color: rgba(255,255,255,0.68);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.cookie-text a {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    border: none;
+    cursor: pointer;
+    padding: 11px 19px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.cookie-accept {
+    background: var(--orange);
+    color: white;
+}
+
+.cookie-accept:hover {
+    background: var(--orange-dark);
+    transform: translateY(-2px);
+}
+
+.cookie-decline {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.cookie-decline:hover {
+    background: white;
+    color: var(--navy);
+}
+
+@keyframes cookieSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .desktop-nav a {
+        font-size: 11px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .desktop-nav a::after {
+        left: 6px;
+        right: 6px;
+    }
+
+    .nav-cta {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .cookie-banner {
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .cookie-actions {
+        justify-content: flex-end;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container,
+    .page-hero-content,
+    .policy-container,
+    .footer-grid,
+    .footer-bottom {
+        width: calc(100% - 30px);
+    }
+
+    .page-hero {
+        min-height: 400px;
+    }
+
+    .page-hero h1 {
+        font-size: 45px;
+    }
+
+    .policy-section {
+        padding: 65px 0;
+    }
+
+    .policy-intro {
+        padding: 20px;
+    }
+
+    .policy-block h2 {
+        font-size: 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+    }
+
+    .cookie-banner {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        padding: 18px;
+    }
+
+    .cookie-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cookie-btn {
+        width: 100%;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     PRELOADER
+======================================================= -->
+
+<div class="preloader" id="preloader">
+
+    <div class="loader-inner">
+
+        <div class="loader-mark"></div>
+
+        <span>Elite Property</span>
+
+    </div>
+
+</div>
+
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header class="site-header">
+
+    <div class="nav-container">
+
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-mark"></div>
+
+            <div class="logo-text">
+
+                <strong>ELITE PROPERTY</strong>
+
+                <small>STUDENT ACCOMMODATION</small>
+
+            </div>
+
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="accommodation.html">Accommodation</a>
+
+            <a href="facilities.html">Facilities</a>
+
+            <a href="development.html">Development</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="contact.html" class="nav-cta">Enquire</a>
+
+        </nav>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =======================================================
+     MOBILE NAVIGATION
+======================================================= -->
+
+<div class="mobile-nav" id="mobileNav">
+
+    <div class="mobile-nav-inner">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="accommodation.html">Accommodation</a>
+
+        <a href="facilities.html">Facilities</a>
+
+        <a href="development.html">Development</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="contact.html" class="mobile-cta">
+            Make an Enquiry
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =======================================================
+     PAGE HERO
+======================================================= -->
+
+<section class="page-hero">
+
+    <div class="page-hero-content">
+
+        <span class="eyebrow">
+            Elite Property
+        </span>
+
+        <h1>
+            Privacy Policy
+        </h1>
+
+        <p>
+            Your privacy matters. This policy explains how Elite Property
+            handles personal information provided through this website.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     POLICY CONTENT
+======================================================= -->
+
+<main class="policy-section">
+
+    <div class="policy-container">
+
+
+        <div class="policy-intro">
+
+            <p>
+                Elite Property respects the privacy of visitors and prospective
+                residents. We aim to handle personal information responsibly
+                and transparently when you communicate with us through this
+                website.
+            </p>
+
+        </div>
+
+
+        <!-- 1 -->
+
+        <section class="policy-block">
+
+            <h2>
+                1. About <span>Elite Property</span>
+            </h2>
+
+            <p>
+                Elite Property is a student accommodation provider based in
+                Mthatha, Eastern Cape, South Africa.
+            </p>
+
+            <p>
+                Our current accommodation property is Copperleaf Residence 2,
+                located at 888 Mgxaji Street, Ngangelizwe, Mthatha,
+                Eastern Cape, South Africa.
+            </p>
+
+        </section>
+
+
+        <!-- 2 -->
+
+        <section class="policy-block">
+
+            <h2>
+                2. Information We May <span>Collect</span>
+            </h2>
+
+            <p>
+                When you contact us or submit an enquiry, you may voluntarily
+                provide information such as:
+            </p>
+
+            <ul>
+
+                <li>Your name</li>
+
+                <li>Telephone or mobile number</li>
+
+                <li>Email address</li>
+
+                <li>Your relationship to the accommodation enquiry,
+                    such as student, parent or guardian</li>
+
+                <li>Information about your accommodation requirements</li>
+
+                <li>Any other information you choose to include in a message</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 3 -->
+
+        <section class="policy-block">
+
+            <h2>
+                3. How We Use <span>Information</span>
+            </h2>
+
+            <p>
+                Information submitted through this website may be used to:
+            </p>
+
+            <ul>
+
+                <li>Respond to accommodation enquiries</li>
+
+                <li>Provide information about our properties and facilities</li>
+
+                <li>Communicate with prospective residents, parents,
+                    guardians or other enquirers</li>
+
+                <li>Respond to general questions or requests</li>
+
+                <li>Administer and improve our website and services</li>
+
+            </ul>
+
+            <p>
+                We aim to use personal information only for purposes connected
+                with the enquiry or service for which it was provided, or where
+                otherwise permitted by applicable law.
+            </p>
+
+        </section>
+
+
+        <!-- 4 -->
+
+        <section class="policy-block">
+
+            <h2>
+                4. Sharing of <span>Information</span>
+            </h2>
+
+            <p>
+                Elite Property does not intend to sell personal information
+                submitted through this website.
+            </p>
+
+            <p>
+                Information may be shared where reasonably necessary to
+                respond to an enquiry, provide a requested service, operate
+                the website, comply with a legal obligation, or protect the
+                rights and safety of the business or individuals.
+            </p>
+
+        </section>
+
+
+        <!-- 5 -->
+
+        <section class="policy-block">
+
+            <h2>
+                5. Website Forms and <span>Communication</span>
+            </h2>
+
+            <p>
+                If you submit an enquiry through the website, the information
+                you provide may be transmitted through the communication
+                method used by the website and may be received by Elite Property
+                through its designated contact channels.
+            </p>
+
+            <p>
+                Please avoid submitting highly sensitive information through
+                general website enquiry forms unless it is specifically
+                requested and an appropriate method of submission has been
+                provided.
+            </p>
+
+        </section>
+
+
+        <!-- 6 -->
+
+        <section class="policy-block">
+
+            <h2>
+                6. Cookies and <span>Similar Technologies</span>
+            </h2>
+
+            <p>
+                This website may use cookies or similar browser-based
+                technologies for functionality, remembering visitor preferences,
+                website performance or analytics where these services are
+                enabled.
+            </p>
+
+            <p>
+                A cookie or similar technology may also be used to remember
+                whether a visitor has interacted with the website's cookie
+                notice.
+            </p>
+
+            <p>
+                You can manage cookies through your browser settings. Some
+                website functionality may be affected if certain cookies or
+                browser storage features are disabled.
+            </p>
+
+        </section>
+
+
+        <!-- 7 -->
+
+        <section class="policy-block">
+
+            <h2>
+                7. Google Maps and <span>Third-Party Services</span>
+            </h2>
+
+            <p>
+                This website may display an embedded Google Maps map to help
+                visitors locate our accommodation property.
+            </p>
+
+            <p>
+                Third-party services such as embedded maps, analytics,
+                hosting or other website technologies may process information
+                according to their own privacy policies and terms.
+            </p>
+
+            <p>
+                Elite Property does not control the privacy practices of
+                independent third-party service providers.
+            </p>
+
+        </section>
+
+
+        <!-- 8 -->
+
+        <section class="policy-block">
+
+            <h2>
+                8. Data <span>Security</span>
+            </h2>
+
+            <p>
+                Elite Property takes reasonable steps to protect personal
+                information against inappropriate access, loss, misuse or
+                disclosure.
+            </p>
+
+            <p>
+                However, no internet transmission or electronic storage system
+                can be guaranteed to be completely secure.
+            </p>
+
+        </section>
+
+
+        <!-- 9 -->
+
+        <section class="policy-block">
+
+            <h2>
+                9. Retention of <span>Information</span>
+            </h2>
+
+            <p>
+                Personal information may be retained for as long as reasonably
+                necessary to deal with the purpose for which it was collected,
+                to maintain relevant business records, or where retention is
+                required or permitted by law.
+            </p>
+
+        </section>
+
+
+        <!-- 10 -->
+
+        <section class="policy-block">
+
+            <h2>
+                10. Your <span>Rights</span>
+            </h2>
+
+            <p>
+                Subject to applicable law, you may have rights relating to
+                personal information held about you, including requesting
+                access to information, requesting correction of inaccurate
+                information, or raising concerns about how information is
+                handled.
+            </p>
+
+            <p>
+                Requests relating to personal information can be directed to
+                Elite Property using the contact details below.
+            </p>
+
+        </section>
+
+
+        <!-- 11 -->
+
+        <section class="policy-block">
+
+            <h2>
+                11. Protection of Personal <span>Information</span>
+            </h2>
+
+            <p>
+                Elite Property operates in South Africa and seeks to handle
+                personal information in accordance with applicable South
+                African privacy and data-protection requirements, including
+                the Protection of Personal Information Act (POPIA), where
+                applicable.
+            </p>
+
+            <p>
+                This website policy is intended to explain our general approach
+                to personal information. Specific processing activities may
+                depend on the nature of an enquiry or service requested.
+            </p>
+
+        </section>
+
+
+        <!-- 12 -->
+
+        <section class="policy-block">
+
+            <h2>
+                12. Changes to This <span>Policy</span>
+            </h2>
+
+            <p>
+                Elite Property may update this Privacy Policy from time to
+                time to reflect changes to the website, our services,
+                applicable legal requirements or our information-handling
+                practices.
+            </p>
+
+            <p>
+                The latest version published on this website will apply to
+                future website use.
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section class="policy-block">
+
+            <h2>
+                13. Contact <span>Elite Property</span>
+            </h2>
+
+            <div class="contact-box">
+
+                <h3>
+                    Privacy enquiries
+                </h3>
+
+                <p>
+
+                    Elite Property<br>
+                    888 Mgxaji Street<br>
+                    Ngangelizwe<br>
+                    Mthatha<br>
+                    Eastern Cape<br>
+                    South Africa
+
+                    <br><br>
+
+                    Phone:
+                    <a href="tel:0684326815">
+                        068 432 6815
+                    </a>
+
+                    <br>
+
+                    Email:
+                    <a href="mailto:Lshakoane03@gmail.com">
+                        Lshakoane03@gmail.com
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <div class="last-updated">
+
+            Last updated: September 2026
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-mark"></div>
+
+                <div class="logo-text">
+
+                    <strong>ELITE PROPERTY</strong>
+
+                    <small>STUDENT ACCOMMODATION</small>
+
+                </div>
+
+            </a>
+
+            <p>
+                Quality student accommodation focused on safety,
+                security, affordability and student success in the
+                Eastern Cape.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Explore</h4>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="accommodation.html">Accommodation</a>
+
+            <a href="facilities.html">Facilities</a>
+
+            <a href="development.html">Development</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Contact</h4>
+
+            <div class="footer-contact">
+
+                888 Mgxaji Street<br>
+                Ngangelizwe<br>
+                Mthatha<br>
+                Eastern Cape<br>
+                South Africa
+
+                <br>
+
+                <a href="tel:0684326815">
+                    068 432 6815
+                </a>
+
+                <a href="mailto:Lshakoane03@gmail.com">
+                    Lshakoane03@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div>
+            © 2026 Elite Property. All rights reserved.
+        </div>
+
+        <div class="footer-legal">
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="terms.html">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =======================================================
+     COOKIE CONSENT BANNER
+======================================================= -->
+
+<div
+    class="cookie-banner"
+    id="cookieBanner"
+    role="dialog"
+    aria-label="Cookie notice"
+>
+
+    <div class="cookie-text">
+
+        <strong>
+            Your privacy matters
+        </strong>
+
+        <p>
+
+            This website may use cookies or similar technologies
+            to support functionality, preferences and website
+            performance. By selecting Accept, you agree to their
+            use where applicable.
+
+            <a href="privacy.html">
+                Read our Privacy Policy
+            </a>
+
+        </p>
+
+    </div>
+
+
+    <div class="cookie-actions">
+
+        <button
+            class="cookie-btn cookie-decline"
+            id="cookieDecline"
+            type="button"
+        >
+            Decline
+        </button>
+
+        <button
+            class="cookie-btn cookie-accept"
+            id="cookieAccept"
+            type="button"
+        >
+            Accept
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
+<script>
+
+/* =========================================================
+   PRELOADER
+========================================================= */
+
+window.addEventListener("load", function() {
+
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(function() {
+
+        preloader.classList.add("hide");
+
+    }, 500);
+
+});
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const mobileNav = document.getElementById("mobileNav");
+
+menuToggle.addEventListener("click", function() {
+
+    const isOpen = mobileNav.classList.toggle("open");
+
+    menuToggle.classList.toggle("active");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+    document.body.classList.toggle(
+        "no-scroll",
+        isOpen
+    );
+
+});
+
+
+document.querySelectorAll(".mobile-nav a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        mobileNav.classList.remove("open");
+
+        menuToggle.classList.remove("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        document.body.classList.remove("no-scroll");
+
+    });
+
+});
+
+
+/* =========================================================
+   COOKIE CONSENT
+========================================================= */
+
+const cookieBanner =
+    document.getElementById("cookieBanner");
+
+const cookieAccept =
+    document.getElementById("cookieAccept");
+
+const cookieDecline =
+    document.getElementById("cookieDecline");
+
+const cookieChoice =
+    localStorage.getItem("elitePropertyCookieChoice");
+
+
+/*
+    Show the banner only when the visitor
+    has not already made a choice.
+*/
+
+if (!cookieChoice) {
+
+    setTimeout(function() {
+
+        cookieBanner.classList.add("show");
+
+    }, 1000);
+
+}
+
+
+/* Accept */
+
+cookieAccept.addEventListener("click", function() {
+
+    localStorage.setItem(
+        "elitePropertyCookieChoice",
+        "accepted"
+    );
+
+    cookieBanner.classList.remove("show");
+
+});
+
+
+/* Decline */
+
+cookieDecline.addEventListener("click", function() {
+
+    localStorage.setItem(
+        "elitePropertyCookieChoice",
+        "declined"
+    );
+
+    cookieBanner.classList.remove("show");
+
+});
+
+</script>
+
+</body>
+</html>
