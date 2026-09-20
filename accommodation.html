@@ -1,0 +1,2901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Accommodation | Elite Property | Mthatha</title>
+
+    <meta
+        name="description"
+        content="Discover Copperleaf Residence 2 by Elite Property in Ngangelizwe, Mthatha. NSFAS-accredited student accommodation with furnished bedrooms, Wi-Fi, communal facilities, security and renewable-energy infrastructure."
+    >
+
+    <meta
+        name="keywords"
+        content="student accommodation Mthatha, NSFAS accommodation Mthatha, Walter Sisulu University accommodation, WSU accommodation, Copperleaf Residence 2, Elite Property accommodation, Ngangelizwe student accommodation"
+    >
+
+    <meta name="author" content="Elite Property">
+
+    <meta property="og:title" content="Student Accommodation | Elite Property">
+
+    <meta
+        property="og:description"
+        content="Copperleaf Residence 2 — safe, secure and student-centred accommodation in Mthatha, Eastern Cape."
+    >
+
+    <meta property="og:type" content="website">
+
+
+    <style>
+
+        /* =========================================================
+           ELITE PROPERTY — ACCOMMODATION PAGE
+           Temporary inline CSS
+           Final CSS will be consolidated later.
+        ========================================================= */
+
+        :root {
+            --navy: #071a2b;
+            --navy-light: #0c263d;
+            --navy-mid: #10344e;
+            --orange: #f47b20;
+            --orange-light: #ff9945;
+            --white: #ffffff;
+            --off-white: #f5f7f9;
+            --grey: #aab7c3;
+            --dark-grey: #687785;
+            --black: #030b12;
+            --line: rgba(255,255,255,0.10);
+            --shadow: 0 25px 70px rgba(0,0,0,0.25);
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--off-white);
+            color: var(--navy);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        button {
+            font: inherit;
+        }
+
+
+        /* =========================================================
+           PRELOADER
+        ========================================================= */
+
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background: var(--navy);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+
+        #preloader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+
+        .loader {
+            text-align: center;
+            color: white;
+        }
+
+
+        .loader-mark {
+            width: 48px;
+            height: 48px;
+            border: 3px solid rgba(255,255,255,0.15);
+            border-top-color: var(--orange);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 18px;
+        }
+
+
+        .loader span {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 86px;
+            z-index: 1000;
+            background: rgba(7,26,43,0.94);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+
+        .nav {
+            width: min(1180px, 92%);
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* Temporary logo */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+        }
+
+
+        .logo-mark {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--orange);
+            position: relative;
+        }
+
+
+        .logo-mark::before {
+            content: "";
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            background: var(--orange);
+            top: 9px;
+            left: 9px;
+        }
+
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+
+        .logo-main {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+
+        .logo-sub {
+            margin-top: 5px;
+            font-size: 8px;
+            letter-spacing: 3px;
+            color: var(--orange);
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+
+        .nav-links a {
+            color: rgba(255,255,255,0.78);
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: 0.3s ease;
+        }
+
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+
+        .nav-cta {
+            padding: 11px 18px;
+            background: var(--orange);
+            color: white !important;
+            border-radius: 2px;
+        }
+
+
+        .nav-cta::after {
+            display: none;
+        }
+
+
+        .nav-cta:hover {
+            background: var(--orange-light);
+            transform: translateY(-2px);
+        }
+
+
+        .menu-toggle {
+            display: none;
+            width: 42px;
+            height: 42px;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            cursor: pointer;
+            font-size: 22px;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 82vh;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,26,43,0.97) 0%,
+                    rgba(7,26,43,0.82) 48%,
+                    rgba(7,26,43,0.30) 100%
+                ),
+                url("https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    transparent 30%,
+                    rgba(244,123,32,0.07),
+                    transparent 70%
+                );
+
+            animation: heroSweep 9s ease-in-out infinite alternate;
+        }
+
+
+        @keyframes heroSweep {
+
+            from {
+                transform: translateX(-7%);
+            }
+
+            to {
+                transform: translateX(7%);
+            }
+
+        }
+
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            opacity: 0.10;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.15) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.15) 1px,
+                    transparent 1px
+                );
+
+            background-size: 90px 90px;
+        }
+
+
+        .hero-content {
+            width: min(1180px, 92%);
+            margin: auto;
+            position: relative;
+            z-index: 2;
+            padding-top: 80px;
+        }
+
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            color: var(--orange);
+
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            margin-bottom: 22px;
+        }
+
+
+        .eyebrow::before {
+            content: "";
+            width: 38px;
+            height: 2px;
+            background: var(--orange);
+        }
+
+
+        .hero h1 {
+            max-width: 850px;
+
+            color: white;
+
+            font-size: clamp(46px, 7vw, 84px);
+
+            line-height: 0.97;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 28px;
+
+            animation: heroReveal 1.1s ease forwards;
+        }
+
+
+        .hero h1 span {
+            color: var(--orange);
+        }
+
+
+        .hero-description {
+            max-width: 670px;
+
+            color: rgba(255,255,255,0.78);
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            animation: heroReveal 1.3s 0.2s ease both;
+        }
+
+
+        @keyframes heroReveal {
+
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 35px;
+            left: 4%;
+
+            color: rgba(255,255,255,0.55);
+
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            writing-mode: vertical-rl;
+        }
+
+
+        .hero-scroll::after {
+            content: "";
+
+            display: block;
+
+            width: 1px;
+            height: 55px;
+
+            background: var(--orange);
+
+            margin: 12px auto 0;
+        }
+
+
+        /* =========================================================
+           GLOBAL SECTIONS
+        ========================================================= */
+
+        .section {
+            padding: 120px 0;
+        }
+
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+
+        .section-label {
+            color: var(--orange);
+
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+
+        .section-title {
+            font-size: clamp(37px, 5vw, 60px);
+
+            line-height: 1.03;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .section-intro {
+            max-width: 700px;
+
+            color: var(--dark-grey);
+
+            font-size: 17px;
+        }
+
+
+        /* =========================================================
+           PROPERTY INTRO
+        ========================================================= */
+
+        .property-intro {
+            background: white;
+        }
+
+
+        .property-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .property-image {
+            position: relative;
+        }
+
+
+        .property-image img {
+            height: 620px;
+
+            object-fit: cover;
+
+            filter: saturate(0.88);
+        }
+
+
+        .property-image::after {
+            content: "";
+
+            position: absolute;
+
+            right: -18px;
+            bottom: -18px;
+
+            width: 140px;
+            height: 140px;
+
+            border-right: 3px solid var(--orange);
+            border-bottom: 3px solid var(--orange);
+        }
+
+
+        .property-badge {
+            position: absolute;
+
+            left: -25px;
+            bottom: 35px;
+
+            background: var(--orange);
+
+            color: white;
+
+            padding: 24px 28px;
+
+            z-index: 2;
+        }
+
+
+        .property-badge strong {
+            display: block;
+
+            font-size: 38px;
+
+            line-height: 1;
+        }
+
+
+        .property-badge span {
+            display: block;
+
+            margin-top: 6px;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .property-copy p {
+            color: var(--dark-grey);
+
+            margin-bottom: 20px;
+
+            font-size: 16px;
+        }
+
+
+        .property-copy p:first-of-type {
+            color: var(--navy);
+
+            font-size: 20px;
+
+            font-weight: 500;
+        }
+
+
+        .property-address {
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: var(--off-white);
+
+            border-left: 3px solid var(--orange);
+        }
+
+
+        .property-address strong {
+            display: block;
+
+            margin-bottom: 3px;
+        }
+
+
+        .property-address span {
+            color: var(--dark-grey);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           KEY FACTS
+        ========================================================= */
+
+        .facts {
+            background: var(--navy);
+
+            color: white;
+        }
+
+
+        .facts-header {
+            max-width: 700px;
+
+            margin-bottom: 60px;
+        }
+
+
+        .facts-header .section-title {
+            color: white;
+        }
+
+
+        .facts-header .section-intro {
+            color: var(--grey);
+        }
+
+
+        .facts-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 1px;
+
+            background: rgba(255,255,255,0.10);
+        }
+
+
+        .fact {
+            background: var(--navy);
+
+            padding: 45px 30px;
+
+            min-height: 220px;
+
+            transition: 0.4s ease;
+        }
+
+
+        .fact:hover {
+            background: var(--navy-mid);
+
+            transform: translateY(-5px);
+        }
+
+
+        .fact-number {
+            color: var(--orange);
+
+            font-size: 42px;
+
+            font-weight: 800;
+
+            line-height: 1;
+
+            margin-bottom: 18px;
+        }
+
+
+        .fact h3 {
+            font-size: 18px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .fact p {
+            color: var(--grey);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           STUDENT EXPERIENCE
+        ========================================================= */
+
+        .experience {
+            background: var(--off-white);
+        }
+
+
+        .experience-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 50px;
+
+            align-items: end;
+
+            margin-bottom: 60px;
+        }
+
+
+        .experience-header .section-intro {
+            max-width: 500px;
+        }
+
+
+        .experience-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .experience-card {
+            background: white;
+
+            padding: 35px 28px;
+
+            min-height: 230px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-bottom: 3px solid transparent;
+
+            transition:
+                transform 0.45s ease,
+                border-color 0.45s ease,
+                box-shadow 0.45s ease;
+        }
+
+
+        .experience-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+
+            width: 45px;
+            height: 45px;
+
+            border-top: 2px solid var(--orange);
+            border-right: 2px solid var(--orange);
+
+            opacity: 0.5;
+
+            transition: 0.4s ease;
+        }
+
+
+        .experience-card:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--orange);
+
+            box-shadow: 0 20px 45px rgba(7,26,43,0.10);
+        }
+
+
+        .experience-card:hover::before {
+            width: 75px;
+            height: 75px;
+            opacity: 1;
+        }
+
+
+        .experience-icon {
+            width: 48px;
+            height: 48px;
+
+            border: 2px solid var(--orange);
+
+            margin-bottom: 25px;
+
+            position: relative;
+        }
+
+
+        .experience-icon::after {
+            content: "";
+
+            position: absolute;
+
+            width: 15px;
+            height: 8px;
+
+            border-left: 2px solid var(--orange);
+            border-bottom: 2px solid var(--orange);
+
+            transform: rotate(-45deg);
+
+            top: 15px;
+            left: 13px;
+        }
+
+
+        .experience-card h3 {
+            font-size: 18px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .experience-card p {
+            color: var(--dark-grey);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           STUDENT-CENTRED
+        ========================================================= */
+
+        .student-centred {
+            background: white;
+        }
+
+
+        .student-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.1fr 0.9fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .student-copy h2 {
+            font-size: clamp(38px, 5vw, 58px);
+
+            line-height: 1.02;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .student-copy p {
+            color: var(--dark-grey);
+
+            font-size: 16px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .student-points {
+            margin-top: 35px;
+        }
+
+
+        .student-point {
+            display: flex;
+
+            gap: 16px;
+
+            padding: 17px 0;
+
+            border-bottom: 1px solid #e3e7eb;
+        }
+
+
+        .point-number {
+            color: var(--orange);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .student-point strong {
+            display: block;
+
+            margin-bottom: 3px;
+        }
+
+
+        .student-point span {
+            color: var(--dark-grey);
+
+            font-size: 13px;
+        }
+
+
+        .student-visual {
+            position: relative;
+        }
+
+
+        .student-visual img {
+            height: 600px;
+
+            object-fit: cover;
+        }
+
+
+        .student-visual::before {
+            content: "";
+
+            position: absolute;
+
+            top: -18px;
+            left: -18px;
+
+            width: 120px;
+            height: 120px;
+
+            border-top: 3px solid var(--orange);
+            border-left: 3px solid var(--orange);
+
+            z-index: 2;
+        }
+
+
+        /* =========================================================
+           NSFAS SECTION
+        ========================================================= */
+
+        .accreditation {
+            background: var(--navy-light);
+
+            color: white;
+        }
+
+
+        .accreditation-grid {
+            display: grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .accreditation-number {
+            font-size: clamp(80px, 11vw, 150px);
+
+            line-height: 0.8;
+
+            color: rgba(244,123,32,0.16);
+
+            font-weight: 900;
+
+            letter-spacing: -8px;
+        }
+
+
+        .accreditation-copy h2 {
+            font-size: clamp(36px, 5vw, 55px);
+
+            line-height: 1.04;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .accreditation-copy h2 span {
+            color: var(--orange);
+        }
+
+
+        .accreditation-copy p {
+            color: var(--grey);
+
+            font-size: 16px;
+
+            margin-bottom: 20px;
+
+            max-width: 680px;
+        }
+
+
+        .accreditation-note {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            border-left: 3px solid var(--orange);
+
+            background: rgba(255,255,255,0.04);
+
+            color: rgba(255,255,255,0.75);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           LOCATION
+        ========================================================= */
+
+        .location {
+            background: var(--off-white);
+        }
+
+
+        .location-header {
+            max-width: 720px;
+
+            margin-bottom: 55px;
+        }
+
+
+        .location-grid {
+            display: grid;
+
+            grid-template-columns:
+                0.75fr 1.25fr;
+
+            gap: 30px;
+
+            align-items: stretch;
+        }
+
+
+        .location-info {
+            background: var(--navy);
+
+            color: white;
+
+            padding: 50px 40px;
+
+            position: relative;
+        }
+
+
+        .location-info::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+
+            width: 80px;
+            height: 80px;
+
+            border-top: 3px solid var(--orange);
+            border-right: 3px solid var(--orange);
+        }
+
+
+        .location-info h3 {
+            font-size: 30px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .location-address {
+            color: var(--grey);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 35px;
+        }
+
+
+        .location-detail {
+            padding: 18px 0;
+
+            border-top: 1px solid rgba(255,255,255,0.10);
+        }
+
+
+        .location-detail strong {
+            display: block;
+
+            color: var(--orange);
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 5px;
+        }
+
+
+        .location-detail span {
+            color: white;
+
+            font-size: 14px;
+        }
+
+
+        .map-container {
+            min-height: 500px;
+
+            background: #dfe4e8;
+
+            overflow: hidden;
+
+            box-shadow: 0 20px 50px rgba(7,26,43,0.10);
+        }
+
+
+        .map-container iframe {
+            width: 100%;
+
+            height: 100%;
+
+            min-height: 500px;
+
+            border: 0;
+
+            display: block;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            min-height: 520px;
+
+            display: flex;
+
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,26,43,0.97),
+                    rgba(7,26,43,0.70)
+                ),
+                url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+        }
+
+
+        .cta-content {
+            max-width: 750px;
+        }
+
+
+        .cta h2 {
+            color: white;
+
+            font-size: clamp(40px, 6vw, 68px);
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .cta h2 span {
+            color: var(--orange);
+        }
+
+
+        .cta p {
+            color: rgba(255,255,255,0.72);
+
+            font-size: 17px;
+
+            max-width: 620px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 15px 26px;
+
+            background: var(--orange);
+
+            color: white;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+        }
+
+
+        .button:hover {
+            background: var(--orange-light);
+
+            transform: translateY(-3px);
+        }
+
+
+        .button-outline {
+            margin-left: 10px;
+
+            background: transparent;
+
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+
+        .button-outline:hover {
+            background: white;
+
+            color: var(--navy);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #030b12;
+
+            color: white;
+
+            padding: 75px 0 25px;
+        }
+
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.4fr 1fr 1fr;
+
+            gap: 60px;
+
+            padding-bottom: 55px;
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.1);
+        }
+
+
+        .footer-brand p {
+            max-width: 400px;
+
+            color: var(--grey);
+
+            font-size: 14px;
+
+            margin-top: 20px;
+        }
+
+
+        .footer-title {
+            font-size: 11px;
+
+            color: var(--orange);
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .footer-links a {
+            display: block;
+
+            color: var(--grey);
+
+            font-size: 13px;
+
+            margin-bottom: 11px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .footer-links a:hover {
+            color: white;
+
+            transform: translateX(4px);
+        }
+
+
+        .footer-bottom {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding-top: 25px;
+
+            color: #66727c;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================================================
+           SCROLL REVEALS
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(45px);
+
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s cubic-bezier(.2,.7,.2,1);
+        }
+
+
+        .reveal.active {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        .reveal-left {
+            opacity: 0;
+
+            transform: translateX(-55px);
+
+            transition: 1s ease;
+        }
+
+
+        .reveal-left.active {
+            opacity: 1;
+
+            transform: translateX(0);
+        }
+
+
+        .reveal-right {
+            opacity: 0;
+
+            transform: translateX(55px);
+
+            transition: 1s ease;
+        }
+
+
+        .reveal-right.active {
+            opacity: 1;
+
+            transform: translateX(0);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .nav-links {
+                position: absolute;
+
+                top: 86px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: var(--navy);
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 0;
+
+                padding: 20px 4%;
+
+                max-height: 0;
+
+                overflow: hidden;
+
+                transition: max-height 0.4s ease;
+            }
+
+
+            .nav-links.open {
+                max-height: 500px;
+            }
+
+
+            .nav-links a {
+                width: 100%;
+
+                padding: 15px 0;
+
+                border-bottom:
+                    1px solid rgba(255,255,255,0.08);
+            }
+
+
+            .nav-cta {
+                width: auto !important;
+
+                margin-top: 10px;
+
+                padding: 12px 18px !important;
+            }
+
+
+            .menu-toggle {
+                display: block;
+            }
+
+
+            .property-grid,
+            .student-grid,
+            .accreditation-grid,
+            .location-grid {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+
+            .facts-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .experience-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .experience-header {
+                display: block;
+            }
+
+
+            .experience-header .section-intro {
+                margin-top: 20px;
+            }
+
+
+            .map-container {
+                min-height: 450px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+                height: 74px;
+            }
+
+
+            .nav-links {
+                top: 74px;
+            }
+
+
+            .hero {
+                min-height: 78vh;
+            }
+
+
+            .hero h1 {
+                font-size: 48px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+
+            .hero-scroll {
+                display: none;
+            }
+
+
+            .section {
+                padding: 80px 0;
+            }
+
+
+            .property-image img,
+            .student-visual img {
+                height: 430px;
+            }
+
+
+            .property-badge {
+                left: 15px;
+
+                bottom: 20px;
+            }
+
+
+            .facts-grid,
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .fact {
+                min-height: 190px;
+            }
+
+
+            .location-info {
+                padding: 40px 28px;
+            }
+
+
+            .map-container,
+            .map-container iframe {
+                min-height: 400px;
+            }
+
+
+            .cta {
+                min-height: 500px;
+            }
+
+
+            .button-outline {
+                margin-left: 0;
+
+                margin-top: 12px;
+            }
+
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+
+                animation-iteration-count: 1 !important;
+
+                transition-duration: 0.01ms !important;
+            }
+
+
+            .reveal,
+            .reveal-left,
+            .reveal-right {
+                opacity: 1;
+
+                transform: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     PRELOADER
+========================================================= -->
+
+<div id="preloader">
+
+    <div class="loader">
+
+        <div class="loader-mark"></div>
+
+        <span>Elite Property</span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <nav class="nav">
+
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-mark"></div>
+
+            <div class="logo-text">
+
+                <div class="logo-main">
+                    ELITE PROPERTY
+                </div>
+
+                <div class="logo-sub">
+                    STUDENT ACCOMMODATION
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="accommodation.html" class="active">
+                Accommodation
+            </a>
+
+            <a href="facilities.html">
+                Facilities
+            </a>
+
+            <a href="development.html">
+                Development
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="contact.html" class="nav-cta">
+                Enquire Now
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-grid"></div>
+
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Student Accommodation
+        </div>
+
+
+        <h1>
+
+            A place to live.
+            <br>
+
+            A place to
+            <span>succeed.</span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Discover Copperleaf Residence 2 — a safe,
+            secure and student-centred accommodation
+            environment in Ngangelizwe, Mthatha.
+
+        </p>
+
+    </div>
+
+
+    <div class="hero-scroll">
+        Explore the residence
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROPERTY INTRO
+========================================================= -->
+
+<section class="section property-intro">
+
+    <div class="container property-grid">
+
+
+        <div class="property-image reveal-left">
+
+            <img
+                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1400&q=85"
+                alt="Student accommodation interior"
+            >
+
+
+            <div class="property-badge">
+
+                <strong>14</strong>
+
+                <span>
+                    Bed Residence
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="property-copy reveal-right">
+
+            <div class="section-label">
+                Copperleaf Residence 2
+            </div>
+
+
+            <h2 class="section-title">
+
+                Designed around
+                <span style="color:var(--orange);">
+                    student life.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Copperleaf Residence 2 is Elite Property's
+                current student accommodation property in
+                Mthatha, Eastern Cape.
+
+            </p>
+
+
+            <p>
+
+                The residence provides 14-bed NSFAS-accredited
+                accommodation and primarily serves students
+                attending Walter Sisulu University and other
+                surrounding tertiary institutions.
+
+            </p>
+
+
+            <p>
+
+                The property is approximately 5–7 km from
+                Walter Sisulu University, placing students
+                within practical reach of their tertiary
+                education environment.
+
+            </p>
+
+
+            <div class="property-address">
+
+                <div>
+
+                    <strong>
+                        Residence Address
+                    </strong>
+
+                    <span>
+                        888 Mgxaji Street,
+                        Ngangelizwe,
+                        Mthatha,
+                        Eastern Cape,
+                        South Africa
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     KEY FACTS
+========================================================= -->
+
+<section class="section facts">
+
+    <div class="container">
+
+
+        <div class="facts-header reveal">
+
+            <div class="section-label">
+                At A Glance
+            </div>
+
+
+            <h2 class="section-title">
+
+                The essentials,
+                <span style="color:var(--orange);">
+                    covered.
+                </span>
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                Copperleaf Residence 2 combines practical
+                student accommodation with the infrastructure
+                needed for a dependable living environment.
+
+            </p>
+
+        </div>
+
+
+        <div class="facts-grid">
+
+
+            <div class="fact reveal">
+
+                <div class="fact-number">
+                    14
+                </div>
+
+                <h3>
+                    Accommodation Beds
+                </h3>
+
+                <p>
+                    NSFAS-accredited student accommodation
+                    at Copperleaf Residence 2.
+                </p>
+
+            </div>
+
+
+            <div class="fact reveal">
+
+                <div class="fact-number">
+                    24/7
+                </div>
+
+                <h3>
+                    Security
+                </h3>
+
+                <p>
+                    Security forms an integral part of the
+                    residence environment.
+                </p>
+
+            </div>
+
+
+            <div class="fact reveal">
+
+                <div class="fact-number">
+                    5–7
+                </div>
+
+                <h3>
+                    KM From WSU
+                </h3>
+
+                <p>
+                    Approximately 5–7 km from Walter Sisulu
+                    University.
+                </p>
+
+            </div>
+
+
+            <div class="fact reveal">
+
+                <div class="fact-number">
+                    2015
+                </div>
+
+                <h3>
+                    Established
+                </h3>
+
+                <p>
+                    Elite Property has been operating since
+                    2015.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STUDENT EXPERIENCE
+========================================================= -->
+
+<section class="section experience">
+
+    <div class="container">
+
+
+        <div class="experience-header reveal">
+
+            <div>
+
+                <div class="section-label">
+                    The Student Experience
+                </div>
+
+                <h2 class="section-title">
+                    More than a
+                    <span style="color:var(--orange);">
+                        room.
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <p class="section-intro">
+
+                The residence is built around the everyday
+                needs of students, combining accommodation,
+                connectivity, communal spaces and reliable
+                infrastructure.
+
+            </p>
+
+        </div>
+
+
+        <div class="experience-grid">
+
+
+            <article class="experience-card reveal">
+
+                <div class="experience-icon"></div>
+
+                <h3>
+                    Furnished Bedrooms
+                </h3>
+
+                <p>
+                    Furnished accommodation designed to provide
+                    students with a practical living environment.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card reveal">
+
+                <div class="experience-icon"></div>
+
+                <h3>
+                    High-Speed Wi-Fi
+                </h3>
+
+                <p>
+                    Connectivity to support study, communication,
+                    entertainment and everyday student life.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card reveal">
+
+                <div class="experience-icon"></div>
+
+                <h3>
+                    Shared Kitchens
+                </h3>
+
+                <p>
+                    Shared kitchen facilities form part of the
+                    residence's practical communal environment.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card reveal">
+
+                <div class="experience-icon"></div>
+
+                <h3>
+                    Communal Areas
+                </h3>
+
+                <p>
+                    Entertainment and communal spaces provide
+                    areas for students to relax and connect.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card reveal">
+
+                <div class="experience-icon"></div>
+
+                <h3>
+                    Streaming Services
+                </h3>
+
+                <p>
+                    Entertainment options are incorporated into
+                    the residence environment.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card reveal">
+
+                <div class="experience-icon"></div>
+
+                <h3>
+                    Solar Backup
+                </h3>
+
+                <p>
+                    Solar-powered backup systems help improve
+                    service reliability.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card reveal">
+
+                <div class="experience-icon"></div>
+
+                <h3>
+                    Renewable Energy
+                </h3>
+
+                <p>
+                    Investment in renewable-energy infrastructure
+                    supports greater resilience.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card reveal">
+
+                <div class="experience-icon"></div>
+
+                <h3>
+                    Secure Environment
+                </h3>
+
+                <p>
+                    24/7 security contributes to a safe and
+                    dependable student living environment.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STUDENT CENTRED
+========================================================= -->
+
+<section class="section student-centred">
+
+    <div class="container student-grid">
+
+
+        <div class="student-copy reveal-left">
+
+            <div class="section-label">
+                Student-Centred Living
+            </div>
+
+
+            <h2>
+
+                Built for the
+                <span style="color:var(--orange);">
+                    everyday.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Students need more than accommodation.
+                They need a living environment that supports
+                the rhythm of tertiary education.
+
+            </p>
+
+
+            <p>
+
+                Elite Property's approach focuses on providing
+                practical facilities, security, connectivity
+                and dependable infrastructure within a
+                student-centred environment.
+
+            </p>
+
+
+            <div class="student-points">
+
+
+                <div class="student-point">
+
+                    <div class="point-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Study & Connectivity
+                        </strong>
+
+                        <span>
+                            Wi-Fi infrastructure supports academic
+                            work and everyday communication.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="student-point">
+
+                    <div class="point-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Safety & Security
+                        </strong>
+
+                        <span>
+                            A secure environment remains central
+                            to the residence experience.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="student-point">
+
+                    <div class="point-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Community
+                        </strong>
+
+                        <span>
+                            Communal spaces create opportunities
+                            for students to connect and unwind.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="student-point">
+
+                    <div class="point-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Reliability
+                        </strong>
+
+                        <span>
+                            Renewable-energy infrastructure helps
+                            strengthen operational resilience.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="student-visual reveal-right">
+
+            <img
+                src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1400&q=85"
+                alt="Student study environment"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NSFAS
+========================================================= -->
+
+<section class="section accreditation">
+
+    <div class="container accreditation-grid">
+
+
+        <div class="reveal-left">
+
+            <div class="accreditation-number">
+                NSFAS
+            </div>
+
+        </div>
+
+
+        <div class="accreditation-copy reveal-right">
+
+            <div class="section-label">
+                Accreditation & Standards
+            </div>
+
+
+            <h2>
+
+                Accommodation built
+                around recognised
+                <span>
+                    standards.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Copperleaf Residence 2 provides
+                NSFAS-accredited student accommodation,
+                supporting students who require accredited
+                housing as part of their tertiary education
+                journey.
+
+            </p>
+
+
+            <p>
+
+                Elite Property maintains its accommodation
+                standards through ongoing operational
+                management and annual grading requirements.
+
+            </p>
+
+
+            <div class="accreditation-note">
+
+                NSFAS accreditation is an important part of
+                the residence's role in supporting students
+                within the tertiary education accommodation
+                environment.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOCATION + GOOGLE MAPS
+========================================================= -->
+
+<section class="section location">
+
+    <div class="container">
+
+
+        <div class="location-header reveal">
+
+            <div class="section-label">
+                Find Us
+            </div>
+
+
+            <h2 class="section-title">
+
+                Your next chapter
+                starts in
+                <span style="color:var(--orange);">
+                    Mthatha.
+                </span>
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                Copperleaf Residence 2 is located in
+                Ngangelizwe, Mthatha, Eastern Cape,
+                approximately 5–7 km from Walter Sisulu
+                University.
+
+            </p>
+
+        </div>
+
+
+        <div class="location-grid">
+
+
+            <div class="location-info reveal-left">
+
+                <h3>
+                    Copperleaf Residence 2
+                </h3>
+
+
+                <div class="location-address">
+
+                    888 Mgxaji Street<br>
+                    Ngangelizwe<br>
+                    Mthatha<br>
+                    Eastern Cape<br>
+                    South Africa
+
+                </div>
+
+
+                <div class="location-detail">
+
+                    <strong>
+                        Nearby Institution
+                    </strong>
+
+                    <span>
+                        Walter Sisulu University
+                    </span>
+
+                </div>
+
+
+                <div class="location-detail">
+
+                    <strong>
+                        Approximate Distance
+                    </strong>
+
+                    <span>
+                        5–7 km from WSU
+                    </span>
+
+                </div>
+
+
+                <div class="location-detail">
+
+                    <strong>
+                        Enquiries
+                    </strong>
+
+                    <span>
+                        068 432 6815
+                    </span>
+
+                </div>
+
+
+                <div class="location-detail">
+
+                    <strong>
+                        Email
+                    </strong>
+
+                    <span>
+                        Lshakoane03@gmail.com
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- GOOGLE MAP -->
+
+            <div class="map-container reveal-right">
+
+                <iframe
+                    src="https://www.google.com/maps?q=888+Mgxaji+Street,+Ngangelizwe,+Mthatha,+Eastern+Cape,+South+Africa&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Elite Property Copperleaf Residence 2 location map">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-content reveal">
+
+            <div class="section-label">
+                Accommodation Enquiries
+            </div>
+
+
+            <h2>
+
+                Looking for your
+                <span>
+                    next home?
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                If you're looking for student accommodation
+                in Mthatha, get in touch with Elite Property
+                to enquire about Copperleaf Residence 2.
+
+            </p>
+
+
+            <a
+                href="contact.html"
+                class="button"
+            >
+                Make an Enquiry
+            </a>
+
+
+            <a
+                href="tel:0684326815"
+                class="button button-outline"
+            >
+                Call 068 432 6815
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <div class="logo-mark"></div>
+
+                    <div class="logo-text">
+
+                        <div class="logo-main">
+                            ELITE PROPERTY
+                        </div>
+
+                        <div class="logo-sub">
+                            STUDENT ACCOMMODATION
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    Providing safe, secure and
+                    student-centred accommodation
+                    in the Eastern Cape since 2015.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Explore
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="accommodation.html">
+                        Accommodation
+                    </a>
+
+                    <a href="facilities.html">
+                        Facilities
+                    </a>
+
+                    <a href="development.html">
+                        Development
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Contact
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="tel:0684326815">
+                        068 432 6815
+                    </a>
+
+                    <a href="mailto:Lshakoane03@gmail.com">
+                        Lshakoane03@gmail.com
+                    </a>
+
+                    <a href="contact.html">
+                        Make an Enquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © <span id="year"></span>
+                Elite Property.
+                All rights reserved.
+
+            </span>
+
+
+            <span>
+
+                Mthatha · Eastern Cape · South Africa
+
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+    /* =========================================================
+       PRELOADER
+    ========================================================= */
+
+    window.addEventListener("load", function () {
+
+        setTimeout(function () {
+
+            document
+                .getElementById("preloader")
+                .classList.add("hide");
+
+        }, 500);
+
+    });
+
+
+    /* =========================================================
+       MOBILE NAV
+    ========================================================= */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navLinks =
+        document.getElementById("navLinks");
+
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("open");
+
+    });
+
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("open");
+
+            });
+
+        });
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    const revealElements =
+        document.querySelectorAll(
+            ".reveal, .reveal-left, .reveal-right"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target
+                            .classList
+                            .add("active");
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+    revealElements.forEach(function (element) {
+
+        observer.observe(element);
+
+    });
+
+
+    /* =========================================================
+       FOOTER YEAR
+    ========================================================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* =========================================================
+       HERO PARALLAX
+    ========================================================= */
+
+    window.addEventListener("scroll", function () {
+
+        const hero =
+            document.querySelector(".hero");
+
+
+        if (!hero) return;
+
+
+        const scrollPosition =
+            window.scrollY;
+
+
+        if (scrollPosition < window.innerHeight) {
+
+            hero.style.backgroundPosition =
+                "center " +
+                (scrollPosition * 0.18) +
+                "px";
+
+        }
+
+    });
+
+
+</script>
+
+
+</body>
+</html>
