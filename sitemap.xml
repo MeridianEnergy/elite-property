@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+
+    <!-- Homepage -->
+
+    <url>
+
+        <loc>
+            https://elitepropertyglobal.com/
+        </loc>
+
+        <changefreq>
+            weekly
+        </changefreq>
+
+        <priority>
+            1.0
+        </priority>
+
+    </url>
+
+
+    <!-- About -->
+
+    <url>
+
+        <loc>
+            https://elitepropertyglobal.com/about.html
+        </loc>
+
+        <changefreq>
+            monthly
+        </changefreq>
+
+        <priority>
+            0.8
+        </priority>
+
+    </url>
+
+
+    <!-- Accommodation -->
+
+    <url>
+
+        <loc>
+            https://elitepropertyglobal.com/accommodation.html
+        </loc>
+
+        <changefreq>
+            weekly
+        </changefreq>
+
+        <priority>
+            0.9
+        </priority>
+
+    </url>
+
+
+    <!-- Facilities -->
+
+    <url>
+
+        <loc>
+            https://elitepropertyglobal.com/facilities.html
+        </loc>
+
+        <changefreq>
+            monthly
+        </changefreq>
+
+        <priority>
+            0.8
+        </priority>
+
+    </url>
+
+
+    <!-- Development -->
+
+    <url>
+
+        <loc>
+            https://elitepropertyglobal.com/development.html
+        </loc>
+
+        <changefreq>
+            monthly
+        </changefreq>
+
+        <priority>
+            0.8
+        </priority>
+
+    </url>
+
+
+    <!-- Contact -->
+
+    <url>
+
+        <loc>
+            https://elitepropertyglobal.com/contact.html
+        </loc>
+
+        <changefreq>
+            monthly
+        </changefreq>
+
+        <priority>
+            0.9
+        </priority>
+
+    </url>
+
+
+    <!-- Privacy Policy -->
+
+    <url>
+
+        <loc>
+            https://elitepropertyglobal.com/privacy.html
+        </loc>
+
+        <changefreq>
+            yearly
+        </changefreq>
+
+        <priority>
+            0.3
+        </priority>
+
+    </url>
+
+
+    <!-- Terms -->
+
+    <url>
+
+        <loc>
+            https://elitepropertyglobal.com/terms.html
+        </loc>
+
+        <changefreq>
+            yearly
+        </changefreq>
+
+        <priority>
+            0.3
+        </priority>
+
+    </url>
+
+</urlset>
